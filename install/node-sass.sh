@@ -1,15 +1,15 @@
 #!/bin/sh
 #
 
+apk --update --no-cache add git build-base perl python
+
 BRANCH="master"
-if [ "$1" != "" ]; then
-  BRANCH="$1"
-fi
 
 echo "Building branch $BRANCH"
+
 mkdir -p "/build/$BRANCH"
 
-git clone --recursive https://github.com/sass/node-sass.git
+git clone https://github.com/sass/node-sass.git
 
 cd node-sass
 git checkout "$BRANCH"

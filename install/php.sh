@@ -2,7 +2,7 @@
 
 # install essentials
 apk --no-cache update && apk upgrade
-apk --no-cache add curl git
+apk --no-cache add curl
 
 # install mysql pdo
 docker-php-ext-install pdo_mysql
